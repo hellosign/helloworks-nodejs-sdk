@@ -1,0 +1,45 @@
+{
+  "name": "helloworks-sdk",
+  "version": "1.0.0",
+  "description": "A Node.js SDK for easily creating and managing HelloWorks workflow instances.",
+  "main": "index.js",
+  "license": "Apache-2.0",
+  "scripts": {
+    "release": "standard-version",
+    "release:beta": "standard-version --prerelease beta",
+    "test": "jest test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellosign/helloworks-nodejs-sdk.git"
+  },
+  "keywords": [
+    "hellosign",
+    "helloworks",
+    "sdk",
+    "workflow",
+    "esignature",
+    "esign",
+    "sign"
+  ],
+  "author": {
+    "name": "HelloSign",
+    "email": "apisupport@hellosign.com",
+    "url": "https://hellosign.com"
+  },
+  "bugs": {
+    "url": "https://github.com/hellosign/helloworks-nodejs-sdk/issues"
+  },
+  "homepage": "https://github.com/hellosign/helloworks-nodejs-sdk",
+  "dependencies": {
+    "form-data": "^2.3.3",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@hellosign/eslint-config": "^1.4.0",
+    "eslint": "^5.15.1",
+    "jest": "^24.5.0",
+    "jest-runner-eslint": "^0.7.3",
+    "standard-version": "^5.0.1"
+  }
+}

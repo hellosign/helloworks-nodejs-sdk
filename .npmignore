@@ -1,0 +1,7 @@
+.coverage
+.github
+.eslintrc
+.travis.yml
+
+jest.config.js
+jest

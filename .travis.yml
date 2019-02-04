@@ -1,0 +1,66 @@
+language: node_js
+node_js:
+  - "8"
+  - "9"
+  - "10"
+  - "node"
+  - "lts/*"
+deploy:
+
+  # This Travis CI deploy configuration will automatically
+  # deploy builds triggered by tags denoting only stable
+  # versions to npm tagged as "latest".
+  #
+  # npmjs.com/package/helloworks-sdk
+  - provider: npm
+    skip_cleanup: true
+    email: $NPM_EMAIL_ADDRESS
+    api_key: $NPM_API_KEY
+    tag: latest
+    on:
+      tags: true
+      condition: $TRAVIS_TAG =~ ^v[0-9]+\.[0-9]+\.[0-9]+$
+
+  # This Travis CI deploy configuration will automatically
+  # deploy builds triggered by tags denoting only alpha or
+  # beta versions to npm tagged as "next".
+  #
+  # npmjs.com/package/helloworks-sdk
+  - provider: npm
+    skip_cleanup: true
+    email: $NPM_EMAIL_ADDRESS
+    api_key: $NPM_API_KEY
+    tag: next
+    on:
+      tags: true
+      condition: $TRAVIS_TAG =~ ^v[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta)\.[0-9]+$
+
+  # This Travis CI deploy configuration will automatically
+  # deploy builds triggered by tags denoting only stable
+  # versions to GitHub releases.
+  #
+  # github.com/hellosign/helloworks-nodejs-sdk/releases
+  - provider: releases
+    skip_cleanup: true
+    api_key: $GITHUB_OAUTH_TOKEN
+    tag_name: $TRAVIS_TAG
+    target_commitish: $TRAVIS_COMMIT
+    on:
+      tags: true
+      condition: $TRAVIS_TAG =~ ^v[0-9]+\.[0-9]+\.[0-9]+$
+
+  # This Travis CI deploy configuration will automatically
+  # deploy builds triggered by tags denoting only alpha or
+  # beta versions to GitHub releases and tagged as
+  # "prerelease".
+  #
+  # github.com/hellosign/helloworks-nodejs-sdk/releases
+  - provider: releases
+    skip_cleanup: true
+    api_key: $GITHUB_OAUTH_TOKEN
+    tag_name: $TRAVIS_TAG
+    target_commitish: $TRAVIS_COMMIT
+    prerelease: true
+    on:
+      tags: true
+      condition: $TRAVIS_TAG =~ ^v[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta)\.[0-9]+$
