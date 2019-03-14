@@ -3,7 +3,6 @@
 > A Node.js SDK for easily creating and managing [HelloWorks][external_helloworks] workflow instances.
 
 [![Npm version][badge_npm-version]][external_npm]
-[![Npm downloads][badge_npm-downloads]][external_npm]
 [![Travis][badge_travis]][external_travis]
 [![David][badge_david]][external_david]
 
@@ -60,7 +59,6 @@ More examples and documentation can be found in the [API Documentation][wiki_api
 [changelog]: https://github.com/hellosign/helloworks-nodejs-sdk/blob/master/CHANGELOG.md
 
 [badge_npm-version]: https://img.shields.io/npm/v/helloworks-sdk.svg
-[badge_npm-downloads]: https://img.shields.io/npm/dm/helloworks-sdk.svg
 [badge_david]: https://img.shields.io/david/hellosign/helloworks-nodejs-sdk.svg
 [badge_travis]: https://img.shields.io/travis/hellosign/helloworks-nodejs-sdk/master.svg
 
