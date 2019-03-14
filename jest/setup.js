@@ -5,6 +5,12 @@ const testApiKeySecret = process.env.HW_API_KEY_SECRET;
 const testWorkflowId = process.env.HW_TEST_WORKFLOW_ID;
 const testCompletedInstanceId = process.env.HW_TEST_COMPLETED_INSTANCE_ID;
 
+const wait = (waitMs) => {
+  return new Promise((resolve) => {
+    setTimeout(resolve, waitMs);
+  });
+};
+
 const client = new HelloWorks({
   apiKeyId: testApiKeyId,
   apiKeySecret: testApiKeySecret,
@@ -15,3 +21,4 @@ global.testApiKeySecret = testApiKeySecret;
 global.testWorkflowId = testWorkflowId;
 global.testCompletedInstanceId = testCompletedInstanceId;
 global.client = client;
+global.wait = wait;
