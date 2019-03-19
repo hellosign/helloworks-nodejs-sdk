@@ -3,7 +3,6 @@
 > A Node.js SDK for easily creating and managing [HelloWorks][external_helloworks] workflow instances.
 
 [![Npm version][badge_npm-version]][external_npm]
-[![Npm downloads][badge_npm-downloads]][external_npm]
 [![Travis][badge_travis]][external_travis]
 [![David][badge_david]][external_david]
 
@@ -23,22 +22,24 @@ In your backend app, require the `helloworks-sdk` library and instantiate a new 
 const HelloWorks = require('helloworks-sdk');
 
 const client = new HelloWorks({
-  apiKeyId: 'Your API key ID',
-  apiKeySecret: 'Your API key secret'
+  apiKeyId,
+  apiKeySecret,
 });
 ```
 
-Use the client to easily make HelloWorks API requests without the overhead of handling responses and managing authorization tokens.
+Use the client to easily make HelloWorks API requests without the overhead of handling responses and managing JWT authorization.
 
 ```js
 client.workflowInstances.getInstance({
-  instanceId: 'Your instance ID'
-}).then((instance) => {
+  instanceId,
+}).then((instanceObj) => {
   // ...
 });
 ```
 
 More examples and documentation can be found in the [API Documentation][wiki_api-documentation] Wiki page.
+
+**Note:** It should go without saying that this library must **never be used on the client side** of your application. The HelloWorks Node.js SDK relies on sensitive API keys and by using it on the public-facing frontend codebase you will risk dangerously exposing your API key secret, which will make you vulnerable to impersonation attacks.
 
 
 ## Resources
@@ -60,7 +61,6 @@ More examples and documentation can be found in the [API Documentation][wiki_api
 [changelog]: https://github.com/hellosign/helloworks-nodejs-sdk/blob/master/CHANGELOG.md
 
 [badge_npm-version]: https://img.shields.io/npm/v/helloworks-sdk.svg
-[badge_npm-downloads]: https://img.shields.io/npm/dm/helloworks-sdk.svg
 [badge_david]: https://img.shields.io/david/hellosign/helloworks-nodejs-sdk.svg
 [badge_travis]: https://img.shields.io/travis/hellosign/helloworks-nodejs-sdk/master.svg
 
