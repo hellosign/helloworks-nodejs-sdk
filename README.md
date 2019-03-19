@@ -22,22 +22,24 @@ In your backend app, require the `helloworks-sdk` library and instantiate a new 
 const HelloWorks = require('helloworks-sdk');
 
 const client = new HelloWorks({
-  apiKeyId: 'Your API key ID',
-  apiKeySecret: 'Your API key secret'
+  apiKeyId,
+  apiKeySecret,
 });
 ```
 
-Use the client to easily make HelloWorks API requests without the overhead of handling responses and managing authorization tokens.
+Use the client to easily make HelloWorks API requests without the overhead of handling responses and managing JWT authorization.
 
 ```js
 client.workflowInstances.getInstance({
-  instanceId: 'Your instance ID'
-}).then((instance) => {
+  instanceId,
+}).then((instanceObj) => {
   // ...
 });
 ```
 
 More examples and documentation can be found in the [API Documentation][wiki_api-documentation] Wiki page.
+
+**Note:** It should go without saying that this library must **never be used on the client side** of your application. The HelloWorks Node.js SDK relies on sensitive API keys and by using it on the public-facing frontend codebase you will risk dangerously exposing your API key secret, which will make you vulnerable to impersonation attacks.
 
 
 ## Resources
