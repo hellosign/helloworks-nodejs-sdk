@@ -5,3 +5,5 @@
 
 jest.config.js
 jest
+
+*.test.js
