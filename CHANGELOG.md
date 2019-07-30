@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.1.0](https://github.com/hellosign/helloworks-nodejs-sdk/compare/v1.0.3...v1.1.0) (2019-07-30)
+
+
+### Features
+
+* Add support for metadata ([f36907a](https://github.com/hellosign/helloworks-nodejs-sdk/commit/f36907a)), closes [#5](https://github.com/hellosign/helloworks-nodejs-sdk/issues/5)
+
+
+
 ## [1.0.3](https://github.com/hellosign/helloworks-nodejs-sdk/compare/v1.0.2...v1.0.3) (2019-04-10)
 
 
