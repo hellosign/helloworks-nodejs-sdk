@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.2.0](https://github.com/hellosign/helloworks-nodejs-sdk/compare/v1.1.1...v1.2.0) (2020-01-24)
+
+
+### Bug Fixes
+
+* Skip all tests for now ([724b003](https://github.com/hellosign/helloworks-nodejs-sdk/commit/724b003))
+
+
+### Features
+
+* Adds delegated_authentication and getAuthenticatedLinkForStep ([a44cc1f](https://github.com/hellosign/helloworks-nodejs-sdk/commit/a44cc1f))
+
+
+
 ## [1.1.1](https://github.com/hellosign/helloworks-nodejs-sdk/compare/v1.1.0...v1.1.1) (2020-01-24)
 
 
