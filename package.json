@@ -40,6 +40,6 @@
     "eslint": "^5.15.1",
     "jest": "^24.5.0",
     "jest-runner-eslint": "^0.7.3",
-    "standard-version": "^5.0.1"
+    "standard-version": "^8.0.1"
   }
 }
