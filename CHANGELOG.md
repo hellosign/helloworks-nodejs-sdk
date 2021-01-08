@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.3.0](https://github.com/hellosign/helloworks-nodejs-sdk/compare/v1.2.1...v1.3.0) (2021-01-08)
+
+
+### Features
+
+* Added support for document delivery type ([#13](https://github.com/hellosign/helloworks-nodejs-sdk/issues/13)) ([#15](https://github.com/hellosign/helloworks-nodejs-sdk/issues/15)) ([40b090b](https://github.com/hellosign/helloworks-nodejs-sdk/commit/40b090b06350c73ea221b53fb8c46264c4f316e5)), closes [#14](https://github.com/hellosign/helloworks-nodejs-sdk/issues/14)
+
+
+
 ## [1.2.1](https://github.com/hellosign/helloworks-nodejs-sdk/compare/v1.2.0...v1.2.1) (2020-01-27)
 
 
