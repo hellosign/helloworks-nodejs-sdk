@@ -1,6 +1,6 @@
 {
   "name": "helloworks-sdk",
-  "version": "1.0.3",
+  "version": "1.2.1",
   "description": "A Node.js SDK for easily creating and managing HelloWorks workflow instances.",
   "main": "index.js",
   "license": "Apache-2.0",
